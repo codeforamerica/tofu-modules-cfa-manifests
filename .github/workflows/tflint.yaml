@@ -1,0 +1,14 @@
+name: TFLint Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  tflint:
+    uses: codeforamerica/github-actions/.github/workflows/tflint.yaml@main
